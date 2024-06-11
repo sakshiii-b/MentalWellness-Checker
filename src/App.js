@@ -15,7 +15,7 @@ const App = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch('http://192.168.1.5:5000/fetch_questions');
+        const response = await fetch('http://192.168.123.244:5000/fetch_questions');
         if (!response.ok) { throw new Error('Network response was not ok'); }
         const data = await response.json();
         console.log('Fetched Questions:', data);
@@ -58,7 +58,7 @@ const App = () => {
       const jsonString = JSON.stringify(valuesArray); 
       console.log(jsonString);
 
-      const response = await fetch('http://192.168.1.5:5000/evaluate', {
+      const response = await fetch('http://192.168.123.244:5000/evaluate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -103,11 +103,10 @@ const App = () => {
   }
 
   const footerData = {
-    createdBy: 'Created by team MindFit',
+    createdBy: 'Created by team MentalWellness Checker',
   };
 
   if (questions.length === 0) {
-    // return <ResultScreen submissionResult={submissionResult} />;
     return <div className="loading">Loading...</div>;
   }
 

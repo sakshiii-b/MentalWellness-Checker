@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -41,17 +42,21 @@ ul {
 }
 
 button {
-  width: 50%; /* Button takes full width of parent li */
-  height: 40px; /* Set desired height */
-  padding: 10px 20px;
-  margin: 5px;
+  max-width: 250px; /* Set maximum width for the button */
+  height: auto; /* Adjust height automatically based on content */
+  padding: 8px 16px; /* Adjusted padding */
+  margin: 15px;
   cursor: pointer;
   border-radius: 4px;
   border: none;
-  background-color: #007bff; /* Set your desired button color */
+  background-color: #007bff;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px; /* Adjusted font size */
+  line-height: 1.4; /* Ensure proper line height */
+  white-space: normal; /* Allow text to wrap */
+  text-align: center; /* Center align text */
 }
+
 
 button.selected {
   background-color: #28a745; /* Change the color for the selected option */
